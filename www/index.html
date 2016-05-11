@@ -21,23 +21,24 @@
     <!-- your app's js -->
     <script src="js/app.js"></script>
     <script src="js/controller.js"></script>
+    <script src="js/service.js"></script>
   </head>
-  <body ng-app="NorrisFacts">
+  <body ng-app="starter">
 
     <ion-pane>
       <ion-header-bar class="bar-dark">
-      <h1 class="title">Chuck Norris Facts</h1>
+        <h1 class="title">Chuck Norris Facts</h1>
       </ion-header-bar>
-      <ion-content class="has-header" ng-controller="factController()">
-        <ion-item ng-repeat="fact">
-          {{this.fact}}
-        </ion-item>
-        <div class="row row-center">
-          <div class="col col-center">
-            <button class="button button-positive" ng-click="newFact()">Get New Fact</button>
+      <ion-content class="has-header" >
+        <div ng-controller="factController as facts">
+          <p ng-bind="facts.fact"></p>
+          <!--<div class="row row-center">
+            <button class="button button-block button-positive" ng-click="facts.changeFact()">Get New Fact</button>
+          </div> -->
+          <div class="row row-center">
+            <button class="button button-block button-positive" ng-click="facts.getFact()">Get Internet Fact</button>
           </div>
         </div>
-
       </ion-content>
     </ion-pane>
   </body>

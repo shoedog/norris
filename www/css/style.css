@@ -5,6 +5,6 @@
 }
 .scroll {
   display: table-cell;
-  vertical-align: flex-end;
+  /*vertical-align: flex-end;*/
   text-align: center;
 }
