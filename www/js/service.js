@@ -1,5 +1,8 @@
-angular.module('starter').service('getFacts', function ($http) {
-  var ICNDB = 'http://api.icndb.com/jokes/random?exclude=[explicit]';
+angular.module('starter.service', [])
+
+.service('getFacts', function ($http) {
+  var ICNDB = 'http://api.icndb.com/jokes/random?exclude=[explicit]&amp;escape=javascript';
+  //var ICNDB = 'http://api.icndb.com/jokes/239?escape=javascript';
   this.get = function() {
     return $http.get(ICNDB)
       .then(function(res) {
@@ -9,3 +12,10 @@ angular.module('starter').service('getFacts', function ($http) {
       })
   }
 });
+
+
+
+
+/*
+ http://api.icndb.com/jokes/random?exclude=[explicit]&amp;firstName=John&amp;lastName=Doe&amp;escape=javascript
+ */

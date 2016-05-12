@@ -1,4 +1,6 @@
-angular.module('starter').controller('factController', function(getFacts) {
+angular.module('starter.controller', [])
+
+.controller('factController', function(getFacts) {
   var self = this;
 
   self.fact = "Chuck Norris doesn't write code, he stares at the computer and the code writes itself.";

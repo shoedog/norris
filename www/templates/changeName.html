@@ -1,0 +1,17 @@
+<ion-view view-title="Change Name">
+  <ion-content>
+    <br>
+    <ion-list class="list list-inset">
+      <div class="item item-input-inset">
+        <label class="item item-input" >
+          <input type="text" placeholder="Enter Name"ng-model="name"/>
+        </label>
+         <button class="button button-small" ng-click="facts.getFact()">
+           Update Name
+         </button>
+      </div>
+    </ion-list>
+    <p>Changed to {{ name }}</p>
+  </ion-content>
+</ion-view>
+
