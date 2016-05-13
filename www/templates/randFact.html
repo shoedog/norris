@@ -1,12 +1,13 @@
-<ion-view view-title="Chuck Norris Facts">
+<ion-view>
+    <ion-nav-title ng-bind="Facts.nameF() + ' ' + Facts.nameL() + ' Facts'"></ion-nav-title>
     <ion-content class="padding">
-        <p ng-bind="facts.fact"></p>
+        <p ng-bind="Facts.fact"></p>
 
         <!--<div class="row row-center">
           <button class="button button-block button-positive" ng-click="facts.changeFact()">Get New Fact</button>
         </div> -->
         <div class="row row-center">
-          <button class="button button-block button-positive" ng-click="facts.getFact()">Get New Fact</button>
+          <button class="button button-block button-positive" ng-click="Facts.getFact()">Get New Fact</button>
         </div>
     </ion-content>
 </ion-view>

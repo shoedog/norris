@@ -1,0 +1,57 @@
+<ion-view view-title="Settings">
+  <ion-content>
+    <br>
+    <form novalidate>
+      <div class="list list-inset">
+        <label class="item item-input">
+          <input type="text" placeholder="First Name" ng-model="user.name"/>
+        </label>
+        <label class="item item-input">
+          <input type="text" placeholder="Last Name" ng-model="Name.inNameL"/>
+        </label>
+        <div class="list list-inset">
+          <ion-list>
+            Choose Colors:
+            <ion-checkbox>
+              Red
+            </ion-checkbox>
+            <ion-checkbox>
+              Blue
+            </ion-checkbox>
+            <ion-checkbox>
+              Green
+            </ion-checkbox>
+          </ion-list>
+        </div>
+        <div class="list list-inset">
+          <ion-list>
+            Choose Gender:
+            <ion-radio>
+              Male
+            </ion-radio>
+            <ion-radio>
+              Female
+            </ion-radio>
+          </ion-list>
+        </div>
+        <div class="list list-inset">
+          <label class="item item-input item-select">
+            <div class="input-label">
+              Lightsaber
+            </div>
+            <select>
+              <option>Blue</option>
+              <option selected>Green</option>
+              <option>Red</option>
+            </select>
+          </label>
+        </div>
+        <button class="button button-small" type="submit">
+          Save
+        </button>
+      </div>
+    </form>
+    <p>Changed to {{ settings.nameF() + " " + settings.nameL() }}</p>
+  </ion-content>
+</ion-view>
+

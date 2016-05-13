@@ -1,17 +1,20 @@
 <ion-view view-title="Change Name">
   <ion-content>
     <br>
-    <ion-list class="list list-inset">
-      <div class="item item-input-inset">
-        <label class="item item-input" >
-          <input type="text" placeholder="Enter Name"ng-model="name"/>
+    <form novalidate ng-submit="Name.updateName(Name.inNameF, Name.inNameL)">
+      <div class="list list-inset">
+        <label class="item item-input">
+          <input type="text" placeholder="First Name" ng-model="Name.inNameF"/>
         </label>
-         <button class="button button-small" ng-click="facts.getFact()">
-           Update Name
-         </button>
+        <label class="item item-input">
+          <input type="text" placeholder="Last Name" ng-model="Name.inNameL"/>
+        </label>
+        <button class="button button-small" type="submit">
+            Update Name
+        </button>
       </div>
-    </ion-list>
-    <p>Changed to {{ name }}</p>
+    </form>
+    <p>Changed to {{ Name.nameF() + " " + Name.nameL() }}</p>
   </ion-content>
 </ion-view>
 

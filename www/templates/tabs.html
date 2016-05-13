@@ -1,16 +1,17 @@
 <!-- Create tabs -->
-<ion-tabs class="tabs-color-active-positive">
+  <ion-tabs class="tabs-color-active-positive">
+    <ion-tab title="Change Name" icon-off="ion-ios-person-outline" icon-on="ion-ios-person" href="#/tab/changeName">
+      <ion-nav-view name="tab-changeName">
+      </ion-nav-view>
+    </ion-tab>
+    <ion-tab title="Home" icon-off="ion-ios-home-outline" icon-on="ion-ios-home" href="#/tab/randFact">
+      <ion-nav-view name="tab-randFact">
+      </ion-nav-view>
+    </ion-tab>
+    <ion-tab title="Settings" icon-off="ion-ios-gear-outline" icon-on="ion-ios-gear" href="#/tab/settings">
+      <ion-nav-view name="tab-settings">
+      </ion-nav-view>
+    </ion-tab>
+  </ion-tabs>
 
-  <ion-tab title="Change Name" icon-off="ion-ios-gear-outline" icon-on="ion-ios-gear" href="#/tab/changeName">
-    <ion-nav-view name="changeName-tab">
-      <p>Test</p>
-    </ion-nav-view>
-  </ion-tab>
 
-  <ion-tab title="Home" icon-off="ion-ios-home-outline" icon-on="ion-ios-home" href="#/tab/randFact">
-    <ion-nav-view name="randFact-tab">
-      <p>Test</p>
-    </ion-nav-view>
-  </ion-tab>
-
-</ion-tabs>
