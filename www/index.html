@@ -19,12 +19,35 @@
     <script src="cordova.js"></script>
 
 
-    <!-- your app's js -->
-    <script src="js/app.js"></script>
-    <script src="js/controllers.js"></script>
-    <script src="js/services.js"></script>
+    <!-- app module -->
+    <script src="app/app.module.js"></script>
+    <script src="app/app.route.js"></script>
+    <script src="app/app.js"></script>
+
+    <!-- widgets module -->
+    <script src="app/widgets/widgets.module.js"></script>
+    <script src="app/widgets/favIcon/favIcon.directive.js"></script>
+
+    <!-- joke module -->
+    <script src="app/joke/joke.module.js"></script>
+    <script src="app/joke/joke.controller.js"></script>
+    <script src="app/joke/joke.service.js"></script>
+
+    <!-- jokeName module -->
+    <script src="app/jokeName/jokeName.module.js"></script>
+    <script src="app/jokeName/jokeName.controller.js"></script>
+    <script src="app/jokeName/jokeName.service.js"></script>
+
+    <!-- favorites module -->
+    <script src="app/favorites/favorites.module.js"></script>
+    <script src="app/favorites/favorites.controller.js"></script>
+
+
+
+    <!--<script src="js/services.js"></script>-->
+
   </head>
-  <body ng-app="starter">
+  <body ng-app="app">
     <ion-nav-bar class="bar-stable">
       <ion-nav-back-button></ion-nav-back-button>
     </ion-nav-bar>

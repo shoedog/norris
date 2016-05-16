@@ -1,0 +1,20 @@
+<ion-view view-title="Change Name">
+  <ion-nav-title>Update Name</ion-nav-title>
+  <ion-content>
+    <br>
+    <form novalidate ng-submit="jokeName.updateName(jokeName.inNameF, jokeName.inNameL)">
+      <div class="list list-inset">
+        <label class="item item-input">
+          <input type="text" placeholder="First Name" ng-model="jokeName.inNameF"/>
+        </label>
+        <label class="item item-input">
+          <input type="text" placeholder="Last Name" ng-model="jokeName.inNameL"/>
+        </label>
+        <button class="button button-small" type="submit">
+          Update Name
+        </button>
+      </div>
+    </form>
+    <p>Changed to {{ jokeName.nameF() + " " + jokeName.nameL() }}</p>
+  </ion-content>
+</ion-view>
