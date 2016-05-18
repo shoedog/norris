@@ -1,15 +1,20 @@
 (function() {
 
   angular.module('app.widgets')
-    .directive('faveIcon', faveIconDirective);
+    .directive('faveIcon', ['$document', faveIconDirective]);
 
-  function faveIconDirective(jokeService) {
+  function faveIconDirective() {
     return {
       restrict: 'A',
-      templateUrl: 'app/widgets/favIcon/favIcon.html',
-      replace: false,
-      scope: true,
-    };
+      scope: {
+        //unFavedIcon: '=',
+        //favedIcon: '=',
+        jokeDisplay: '='
+      },
+      controller: 'favIconCtrl',
+      controllerAs: 'vm',
+      bindToController: true,
+      templateUrl: 'app/widgets/favIcon/favIcon.html'
+      }
   }
-
 })();

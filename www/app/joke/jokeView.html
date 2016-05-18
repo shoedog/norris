@@ -1,16 +1,17 @@
 <ion-view>
-  <ion-nav-title ng-bind="joke.nameF() + ' ' + joke.nameL() + ' Facts'"></ion-nav-title>
+  <ion-nav-title ng-bind="joke.nameF() + ' ' + joke.nameL() + ' Jokes'"></ion-nav-title>
   <ion-content class="padding">
     <div>
-      <div fave-icon="joke.joke"></div>
+      <div fave-icon joke-display='joke.joke' <!--ng-click="joke.saveJoke(joke.joke)"-->></div>
+      <div class="row row-center">
+        <button class="button button-block button-positive" ng-click="joke.getJoke()">Get New Joke</button>
+      </div>
     </div>
 
 
     <!--<div class="row row-center">
       <button class="button button-block button-positive" ng-click="facts.changeFact()">Get New Fact</button>
     </div> -->
-    <div class="row row-center">
-      <button class="button button-block button-positive" ng-click="joke.getJoke()">Get New Joke</button>
-    </div>
+
   </ion-content>
 </ion-view>

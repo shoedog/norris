@@ -1,6 +1,12 @@
 <ion-view view-title="Favorites">
   <ion-content>
     <br>
-    <fave-icon></fave-icon>
+    <!--<div ng-repeat="joke in fave.jokes">
+      {{ joke }}
+    </div>-->
+<!-- joke id try for remove -->
+     <div ng-repeat="joke in fave.jokes | orderBy: 'joke'" >
+      <div fave-icon joke-display={{joke}} ng-click="fave.removeJoke($index)"></div>
+     </div>
   </ion-content>
 </ion-view>

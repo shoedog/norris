@@ -1,2 +1,4 @@
 
-angular.module('app.favorites', ['app.joke', 'app.jokeName']);
+angular.module('app.favorites', [
+  'app.joke',
+  'app.jokeName']);

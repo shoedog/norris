@@ -19,6 +19,7 @@
       })
 
       .state('tab.jokeName', {
+        cache: false,
         url: '/jokeName',
         views: {
           'tab-jokeName': {
@@ -28,6 +29,7 @@
         }
       })
       .state('tab.favorites', {
+        cache: false,
         url: '/favorites',
         views: {
           'tab-favorites': {
@@ -37,6 +39,7 @@
         }
       })
       .state('tab.randJoke', {
+        //cache: false,
         url: '/randJoke',
         views: {
           'tab-randJoke': {

@@ -5,32 +5,39 @@
     .service('jokeService', jokeService );
 
   function jokeService($http, jokeNameService) {
-    var jokes = [{
-        id: '',
-        joke: ''
-    }];
+    var jokes = [];
 
     return {
       SaveJoke: function (newJoke) {
-      jokes.push(newJoke);
-    },
-      LoadJoke: function (index) {
-      return jokes;
-    },
+        jokes.push({
+          id: jokes.length,
+          joke: newJoke
+        });
+        console.log(jokes);
+      },
+
+      LoadJokes: function () {
+        return jokes;
+      },
+
+      RemoveJoke: function(index) {
+        jokes.splice(index, 1);
+      },
+
       GetJoke: function () {
-      nameF = jokeNameService.getNameF();
-      nameL = jokeNameService.getNameL();
-      var ICNDB = 'http://api.icndb.com/jokes/random?firstName='
-        + nameF
-        + '&lastName='
-        + nameL
-        + '&exclude=[explicit]&escape=javascript';
-      console.log(ICNDB);
-      return $http.get(ICNDB)
-        .then(function (res) {
-          //console.log(res);
-          //console.log(res.data.value.joke);
-          return res.data.value.joke;
+        nameF = jokeNameService.getNameF();
+        nameL = jokeNameService.getNameL();
+        var ICNDB = 'http://api.icndb.com/jokes/random?firstName='
+          + nameF
+          + '&lastName='
+          + nameL
+          + '&exclude=[explicit]&escape=javascript';
+        console.log(ICNDB);
+        return $http.get(ICNDB)
+          .then(function (res) {
+            //console.log(res);
+            //console.log(res.data.value.joke);
+            return res.data.value.joke;
         })
       }
     }
