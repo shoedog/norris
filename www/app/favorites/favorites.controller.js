@@ -4,7 +4,7 @@
 
     .controller('faveCtrl', faveCtrl);
 
-  function faveCtrl(jokeService, jokeNameService) {
+  function faveCtrl(jokeService) {
     /* jshint validthis: true */
     var self = this;
     self.jokes = jokeService.LoadJokes();

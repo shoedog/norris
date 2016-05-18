@@ -39,7 +39,7 @@
         }
       })
       .state('tab.randJoke', {
-        //cache: false,
+        //cache: true,
         url: '/randJoke',
         views: {
           'tab-randJoke': {

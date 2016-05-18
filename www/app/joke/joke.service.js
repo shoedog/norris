@@ -20,7 +20,17 @@
         return jokes;
       },
 
+      GetJokeIndex: function(jokeToTest){
+        var length = jokes.length;
+        for( var i = 0; i<length; i++){
+          if(jokeToTest == jokes[i].joke){
+            return i;
+          }
+        }
+      },
+
       RemoveJoke: function(index) {
+        console.log("index: " + index);
         jokes.splice(index, 1);
       },
 

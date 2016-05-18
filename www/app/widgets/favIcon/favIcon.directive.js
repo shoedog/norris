@@ -6,15 +6,21 @@
   function faveIconDirective() {
     return {
       restrict: 'A',
-      scope: {
-        //unFavedIcon: '=',
-        //favedIcon: '=',
-        jokeDisplay: '='
+      scope: {},
+      bindToController: {
+        jokeDisplay: '=',
       },
       controller: 'favIconCtrl',
       controllerAs: 'vm',
-      bindToController: true,
-      templateUrl: 'app/widgets/favIcon/favIcon.html'
+      templateUrl: 'app/widgets/favIcon/favIcon.html',
+      /*link: function (scope, element, attributes, controller) {
+        attributes.$observe( 'jokeDisplay', function(value) {
+          //console.log("Value: " + value);
+          //console.log("watch call");
+          favedIcon=false;
+          unFavedIcon=true;
+        });
+      }*/
       }
   }
 })();

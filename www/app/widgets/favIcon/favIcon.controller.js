@@ -2,15 +2,28 @@
   angular.module('app.widgets')
     .controller('favIconCtrl', FavIconController);
 
-  function FavIconController(jokeService){
+  FavIconController.$inject = ['jokeService', '$scope'];
+
+  function FavIconController(jokeService, $scope){
     var vm = this;
 
     vm.toggleFav = toggleFav;
     vm.setToggle = setToggle;
     vm.faveJoke = faveJoke;
     vm.unFaveJoke = unFaveJoke;
+    //vm.watchJoke = watchJoke;
+
+    function faveJoke(){
+      jokeService.SaveJoke(vm.jokeDisplay);
+    };
+
+    function unFaveJoke(){
+      var id = jokeService.GetJokeIndex(vm.jokeDisplay);
+      jokeService.RemoveJoke(id);
+    };
 
     function toggleFav(){
+      //console.log('toggle');
         if( vm.favedIcon == false ){
           faveJoke();
         } else {
@@ -20,35 +33,27 @@
         vm.unFavedIcon = !vm.unFavedIcon;
     };
 
+    function watchJoke(){
+      $scope.$watch('vm.jokeDisplay', function(newValue, oldValue){
+        //console.log('observed');
+        setToggle();
+      });
+    };
+
     function setToggle(){
-      vm.jokes = jokeService.LoadJokes();
-      var isJokeFaved = false;
+      var isJokeFaved = jokeService.GetJokeIndex(vm.jokeDisplay);
 
-      for( vm.jokes.joke in vm.jokes ){
-        if( vm.jokeDisplay == vm.jokes.joke ){
-          isJokeFaved = true;
-        }
-      }
-
-      if( isJokeFaved == false ){
+      if( isJokeFaved < 0 || isJokeFaved == undefined ){
         vm.favedIcon = false;
         vm.unFavedIcon = true;
-      } else if( isJokeFaved == true) {
+      } else if( isJokeFaved >= 0 ) {
         vm.favedIcon = true;
         vm.unFavedIcon = false;
       }
     };
 
-    function faveJoke(){
-      jokeService.SaveJoke(vm.jokeDisplay);
-    }
-
-    function unFaveJoke(){
-      jokeService.RemoveJoke(vm.jokeDisplay);
-    }
-
-    setToggle();
-
+    watchJoke();
+    //setToggle();
   }
 })();
 

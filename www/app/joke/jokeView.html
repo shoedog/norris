@@ -2,7 +2,8 @@
   <ion-nav-title ng-bind="joke.nameF() + ' ' + joke.nameL() + ' Jokes'"></ion-nav-title>
   <ion-content class="padding">
     <div>
-      <div fave-icon joke-display='joke.joke' <!--ng-click="joke.saveJoke(joke.joke)"-->></div>
+      <!--ng-click="joke.saveJoke(joke.joke)"-->
+      <div fave-icon joke-display='joke.joke' ></div>
       <div class="row row-center">
         <button class="button button-block button-positive" ng-click="joke.getJoke()">Get New Joke</button>
       </div>
