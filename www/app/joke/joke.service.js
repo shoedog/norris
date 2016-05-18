@@ -42,7 +42,7 @@
           + '&lastName='
           + nameL
           + '&exclude=[explicit]&escape=javascript';
-        console.log(ICNDB);
+        //console.log(ICNDB);
         return $http.get(ICNDB)
           .then(function (res) {
             //console.log(res);
