@@ -1,0 +1,40 @@
+{
+  "basePath": "",
+  "frameworks": [
+    "jasmine"
+  ],
+  "files": [
+    "../www/lib/ionic/js/ionic.bundle.js",
+    "../www/lib/angular/angular.js",
+    "../www/lib/angular-animate/angular-animate.js",
+    "../www/lib/angular-route/angular-route.js",
+    "../www/lib/angular-sanitize/angular-sanitize.js",
+    "../www/lib/angular-ui-router/release/angular-ui-router.js",
+    "../www/app/**/*.module.js",
+    "../www/app/**/*.js",
+    "../tests/**/*.js"
+  ],
+  "exclude": ["../tests/*.js"],
+  "reporters": [
+    "progress"
+  ],
+  "coverageReporter": {
+    "type": "html",
+    "dir": "../coverage"
+  },
+  "junitReporter": {
+    "outputDir": "../testResultsReport",
+    "outputFile": "test-results.xml",
+    "suite": "norrisApp_tests",
+    "useBrowserName": true
+  },
+  "port": 9876,
+  "colors": true,
+  "logLevel": "INFO",
+  "autoWatch": true,
+  "browsers": [
+    "PhantomJS2"
+  ],
+  "singleRun": false,
+  "concurrency": null
+}

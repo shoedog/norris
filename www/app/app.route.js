@@ -49,7 +49,8 @@
         }
       });
 
-    $urlRouterProvider.otherwise('/tab/randJoke');
+
+    $urlRouterProvider.otherwise('tab/randJoke');
   }
 })();
 

@@ -1,0 +1,5 @@
+
+/*fix for crbug.com/574343 */
+.md-scroll-mask {
+  position: initial;
+}

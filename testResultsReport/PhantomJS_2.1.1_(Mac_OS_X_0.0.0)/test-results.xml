@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<testsuite name="PhantomJS 2.1.1 (Mac OS X 0.0.0)" package="norrisApp_tests" timestamp="2016-05-19T20:53:33" id="0" hostname="c02md82sfgyy" tests="1" errors="1" failures="1" time="0.001">
+  <properties>
+    <property name="browser.fullName" value="Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1"/>
+  </properties>
+  <testcase name="angularjs homepage todo list should add a todo" time="0.001" classname="PhantomJS_2_1_1_(Mac_OS_X_0_0_0).norrisApp_tests.angularjs homepage todo list">
+    <failure type="">ReferenceError: Can't find variable: browser in /Users/wjinks/Norris/norris/tests/app/joke/joke.controller.test.js (line 3)
+/Users/wjinks/Norris/norris/tests/app/joke/joke.controller.test.js:3:12
+</failure>
+  </testcase>
+  <system-out>
+    <![CDATA[PhantomJS 2.1.1 (Mac OS X 0.0.0) LOG: 'WARNING: Tried to load angular more than once.'
+
+]]>
+  </system-out>
+  <system-err/>
+</testsuite>
