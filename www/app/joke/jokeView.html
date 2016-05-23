@@ -1,6 +1,8 @@
 <ion-view>
-  <ion-nav-title ng-bind="joke.nameF() + ' ' + joke.nameL() + ' Jokes'"></ion-nav-title>
+    <ion-nav-title ng-bind="joke.nameF() + ' ' + joke.nameL() + ' Jokes'"></ion-nav-title>
+
   <ion-content class="padding">
+    <button ng-click="joke.showBackDrop()" class="button button-assertive">Go</button>
     <div>
       <!--ng-click="joke.saveJoke(joke.joke)"-->
       <div fave-icon joke-display='joke.joke' id="btnFavJoke"></div>
@@ -9,10 +11,20 @@
       </div>
     </div>
 
-
+    <div class="row">
+      <div class="col"></div>
+      <div class="col"></div>
+    </div>
+    <div class="row">
+      <div class="col"></div>
+      <div class="col">
+        <button on-swipe-right="joke.showAct()" class="button button-block icon-right ion-chevron-right button-balanced">Swipe</button>
+      </div>
+    </div>
     <!--<div class="row row-center">
       <button class="button button-block button-positive" ng-click="facts.changeFact()">Get New Fact</button>
     </div> -->
+
 
   </ion-content>
 </ion-view>
