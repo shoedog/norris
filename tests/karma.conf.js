@@ -7,7 +7,7 @@ module.exports = function(config) {
       "jasmine"
     ],
     reporters: [
-      "spec",
+      "spec"
     ],
     browsers: ['PhantomJS'],
     coverageReporter: {

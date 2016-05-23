@@ -9,6 +9,12 @@
     "gulp-minify-css": "^0.3.0",
     "gulp-rename": "^1.2.0"
   },
+  "scripts": {
+    "unittest": "karma start ../norris/tests/karma.conf.js",
+    "webd_start": "webdriver-manager update && webdriver-manager start",
+    "e2etest": "protractor ../norris/protests/pro.conf.js",
+    "testAll": "npm run unittest && npm run e2etest"
+  },
   "devDependencies": {
     "bower": "^1.7.9",
     "fs": "0.0.2",
